@@ -23,7 +23,7 @@ services:
       - key: DB_POSTGRESDB_USER
         value: postgres.blashsksdvhbjozccejc
       - key: DB_POSTGRESDB_PASSWORD
-        value: AwJSWJXYHfoEQH0
+        value: 9AwJSWJXYHfoEQH0
       - key: DB_POSTGRESDB_SCHEMA
         value: public
       - key: DB_POSTGRESDB_SSL
