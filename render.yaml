@@ -8,19 +8,26 @@ services:
     envVars:
       - key: N8N_ENCRYPTION_KEY
         value: "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"  # 这里是随机生成的加密密钥，下面帮你生成
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
+      - key: PORT
+        value: "5678"  # 或 Render 要求的端口
       - key: DB_TYPE
         value: postgresdb
-      - key: DB_POSTGRESDB_DATABASE
-        value: postgres
       - key: DB_POSTGRESDB_HOST
         value: aws-0-ap-southeast-1.pooler.supabase.com
       - key: DB_POSTGRESDB_PORT
         value: "6543"
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
       - key: DB_POSTGRESDB_USER
         value: postgres.blashsksdvhbjozccejc
       - key: DB_POSTGRESDB_PASSWORD
         value: AwJSWJXYHfoEQH0
       - key: DB_POSTGRESDB_SCHEMA
         value: public
-      - key: GENERIC_TIMEZONE
-        value: Asia/Shanghai
+      - key: DB_POSTGRESDB_SSL
+        value: "true"
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "0"  # 允许自签名证书，等同于“忽略 SSL 错误”
+
